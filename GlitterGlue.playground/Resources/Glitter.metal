@@ -43,16 +43,4 @@ kernel void glitterIsMyFavoriteColor(texture2d<float, access::write> o[[texture(
   color = pow(color, float3(0.5));
 
   o.write(float4(color, 1), gid);
-
-//  int width = o.get_width();
-//  int height = -o.get_height();
-//  float2 res = float2(width, height);
-//
-//  float2 uv = float2(gid.xy) / res.xy;
-//  uv.x -= 0.5;
-//  uv.y += 1.0;
-//  uv.x *= res.x / res.y;
-//
-//  float4 color = float4(render(uv, time), 1.0);
-//  o.write(color, gid);
 }
